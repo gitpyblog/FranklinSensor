@@ -57,7 +57,7 @@ def process_as3935_event(event_type):
         # PIORUN - pokazuj w konsoli i na wyświetlaczu
         distance = lightning_sensor.get_distance()
         if distance == 0:
-            event_str = "Piorun! Nad glowa"
+            event_str = "Piorun! XX KM"  # Zmieniono z "Nad glowa" na "XX KM"
         elif distance == 63:
             event_str = "Piorun! >63km"
         else:
