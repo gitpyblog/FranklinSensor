@@ -40,6 +40,27 @@ Projekt implementuje detektor piorunów wykorzystujący czujnik AS3935 komunikuj
 - VCC → 3.3V
 - GND → GND
 
-## Instalacja
+## Użytkowanie
 
-1. Sklonuj repozytorium:
+Po uruchomieniu program:
+- Inicjalizuje czujnik w trybie wewnętrznym
+- Kalibruje oscylator RCO
+- Wyświetla status na ekranie OLED
+- Czeka na wykrycie piorunów
+
+### Rodzaje wykryć:
+- **Piorun** - wyświetlany na OLED z odległością, logowany w konsoli
+- **Szum** - tylko w konsoli (zakłócenia elektromagnetyczne)
+- **Zakłócenie** - tylko w konsoli (fałszywe alarmy)
+
+### Testowanie:
+Program można testować urządzeniami generującymi zakłócenia:
+- Mikrofalówka
+- Suszarka do włosów
+- Światło fluorescencyjne
+- Silniki elektryczne
+
+## Struktura kodu
+
+- `main.py` - główna logika programu, obsługa przerwań, wyświetlacz
+- `as3935_spi.py` - sterownik czujnika AS3935, komunikacja SPI
