@@ -120,9 +120,10 @@ print("AS3935 interrupt handler set.")
 # --- Main program loop ---
 def main():
     print("Starting lightning detector...")
-    print("=== KONSOLA: Wszystkie wykrycia ===")
-    print("=== WYŚWIETLACZ: Tylko pioruny ===")
-    print("Testuj z mikrofalówką, suszarką, światłem...")
+    print("---KONFIGURACJA---")
+    print("KONSOLA: Wszystkie wykrycia")
+    print("WYŚWIETLACZ: Tylko pioruny ")
+    print("---WYKRYCIA---")
     print()
 
     update_display()
